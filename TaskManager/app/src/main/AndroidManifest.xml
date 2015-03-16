@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.taskmanager">
+
+    <!-- tools:replace="android:icon" tells android
+    to replace the icon in the sugar library with our awesome icon-->
+    <application
+        android:name=".TaskManagerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+        <activity
+            android:name=".ViewTasksActivity"
+            android:label="@string/app_name">
+            <!-- This intent filter tells android that this is the activity to start when we
+            click on the application icon in the launcher-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Whenever you create a new activity you must declare it in the manifest
+            Other things you might want to declare are services, broadcast receivers and
+            permissions-->
+        <activity android:name=".AddTaskActivity" />
+
+        <!-- This metadata is for sugar to create our database-->
+        <meta-data
+            android:name="DATABASE"
+            android:value="taskmanager.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.example.taskmanager" />
+    </application>
+
+</manifest>

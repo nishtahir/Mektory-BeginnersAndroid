@@ -1,1 +1,0 @@
-Week 2 focused on advanced object oriented programming and and android layouts.
