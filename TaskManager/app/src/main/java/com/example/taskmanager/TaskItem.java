@@ -1,12 +1,18 @@
 package com.example.taskmanager;
 
+import com.orm.SugarRecord;
+
 /**
  * Plain old object to hold task item data
  */
-public class TaskItem {
+public class TaskItem extends SugarRecord<TaskItem> {
     String title;
     String description;
     int color;
+
+    public TaskItem(){
+
+    }
 
     public TaskItem(String title, String description, int color) {
         this.title = title;

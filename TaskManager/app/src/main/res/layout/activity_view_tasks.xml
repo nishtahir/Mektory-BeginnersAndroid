@@ -25,7 +25,7 @@
         android:layout_height="match_parent"/>
     
     <ImageButton
-        android:background="@drawable/fab_normal"
+        android:background="@drawable/floating_action_button"
         android:id="@+id/btn_add_task"
         android:layout_width="64dp"
         android:padding="16dp"
@@ -34,5 +34,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/click_me_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me!"
+        android:layout_alignBottom="@+id/my_list"
+        android:layout_toLeftOf="@+id/btn_add_task"
+        android:layout_toStartOf="@+id/btn_add_task" />
 
 </RelativeLayout>
