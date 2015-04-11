@@ -186,4 +186,5 @@ public class ViewTasksActivity extends ActionBarActivity {
         //This will cause it to updated the listview
         adapter.notifyDataSetChanged();
     }
+
 }

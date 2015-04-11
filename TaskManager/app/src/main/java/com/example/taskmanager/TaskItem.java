@@ -9,6 +9,7 @@ public class TaskItem extends SugarRecord<TaskItem> {
     String title;
     String description;
     int color;
+    boolean taskComplete;
 
     public TaskItem(){
 
@@ -43,4 +44,13 @@ public class TaskItem extends SugarRecord<TaskItem> {
     public void setColor(int color) {
         this.color = color;
     }
+
+    public boolean isTaskComplete() {
+        return taskComplete;
+    }
+
+    public void setTaskComplete(boolean taskComplete) {
+        this.taskComplete = taskComplete;
+    }
+
 }
