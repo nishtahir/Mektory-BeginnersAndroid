@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -41,6 +43,8 @@ public class GalleryAdapter extends ArrayAdapter<GalleryItem>{
             holder = (ViewHolder) convertView.getTag();
         }
 
+        String url = objects.get(position).getUrl();
+        Picasso.with(context).load(url).into(holder.image);
         holder.title.setText(objects.get(position).getTitle());
         return convertView;
     }

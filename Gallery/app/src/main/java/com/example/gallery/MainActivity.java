@@ -1,9 +1,12 @@
 package com.example.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -27,6 +30,13 @@ public class MainActivity extends ActionBarActivity {
         adapter = new GalleryAdapter(this, R.layout.grid_item, galleryItems);
         GridView gridView = (GridView) findViewById(R.id.gridView);
         gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(MainActivity.this, OtherActivity.class));
+            }
+        });
     }
 
 
